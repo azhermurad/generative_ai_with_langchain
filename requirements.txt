@@ -1,0 +1,18 @@
+# langchain core
+langchain
+langchain-core
+
+
+# # openAI Integration
+langchain-openai
+
+# ChatGoogleGenerativeAI  Google Integration
+langchain-google-genai
+
+
+# environment varable 
+python-dotenv
+
+# streamlit
+
+streamlit
