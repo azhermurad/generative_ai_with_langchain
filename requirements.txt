@@ -1,1 +1,4 @@
 langchain
+langsmith
+langchain-openai
+# python_dotenv
