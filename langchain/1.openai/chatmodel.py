@@ -8,6 +8,8 @@ if not os.environ.get("OPENAI_API_KEY"):
 
 print(os.environ.get("OPENAI_API_KEY"))
 
+
+# Chatopenai method automatically find teh api key with the name of OPENAI_API_KEY
 llm = ChatOpenAI(
     model="gpt-4o",
     temperature=0
