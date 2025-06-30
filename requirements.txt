@@ -15,3 +15,7 @@ python-dotenv
 # providers
 langchain-openai
 langchain-google-genai
+
+# vector store
+chromadb
+langchain-chroma>=0.1.4
