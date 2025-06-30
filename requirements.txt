@@ -10,6 +10,7 @@ pymupdf
 wikipedia
 langchain_text_splitters
 
+python-dotenv
 
 # providers
 langchain-openai
