@@ -15,9 +15,13 @@ python-dotenv
 # providers
 langchain-openai
 langchain-google-genai
+langchain-ollama
+langchain-huggingface
+sentence-transformers
 
 # vector store
 chromadb
 langchain-chroma>=0.1.4
-langchain-ollama
+
+
 
