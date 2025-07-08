@@ -20,8 +20,7 @@ langchain-huggingface
 sentence-transformers
 
 # vector store
-chromadb
-langchain-chroma>=0.1.4
+langchain-chroma>=0.1.2
 faiss-cpu
 
 
