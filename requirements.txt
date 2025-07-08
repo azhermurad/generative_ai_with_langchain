@@ -22,6 +22,6 @@ sentence-transformers
 # vector store
 chromadb
 langchain-chroma>=0.1.4
-
+faiss-cpu
 
 
