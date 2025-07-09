@@ -1,8 +1,5 @@
 langchain
 langsmith
-langchain-openai
-# python_dotenv
-langchain_community
 pypdf
 bs4
 arxiv   
@@ -13,6 +10,7 @@ langchain_text_splitters
 python-dotenv
 
 # providers
+langchain_community
 langchain-openai
 langchain-google-genai
 langchain-ollama
