@@ -6,7 +6,6 @@ arxiv
 pymupdf
 wikipedia
 langchain_text_splitters
-streamlit
 beautifulsoup4
 
 python-dotenv
@@ -22,5 +21,6 @@ sentence-transformers
 # vector store
 langchain-chroma>=0.1.2
 faiss-cpu
+streamlit
 
 
