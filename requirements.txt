@@ -7,7 +7,7 @@ pymupdf
 wikipedia
 langchain_text_splitters
 beautifulsoup4
-
+fastapi[standard]
 python-dotenv
 
 # providers
@@ -17,6 +17,7 @@ langchain-google-genai
 langchain-ollama
 langchain-huggingface
 sentence-transformers
+langchain-groq
 
 # vector store
 langchain-chroma>=0.1.2
@@ -24,3 +25,6 @@ faiss-cpu
 streamlit
 
 
+
+# deployments
+langserve[all]
