@@ -91,11 +91,6 @@ python app.py
 
 ---
 
-## 📸 Screenshots
-
-*(Optional: Add screenshots of your working app or code snippets here)*
-
----
 
 ## 📌 Tags & Keywords
 
