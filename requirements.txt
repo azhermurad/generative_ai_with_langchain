@@ -11,6 +11,7 @@ fastapi[standard]
 python-dotenv
 
 # providers
+youtube-transcript-api
 langchain_community
 langchain-openai
 langchain-google-genai

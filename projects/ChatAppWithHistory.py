@@ -2,7 +2,7 @@
 # https://python.langchain.com/v0.2/docs/how_to/message_history/
 
 import os
-
+import streamlit as st
 # from fastapi import FastAPI
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -22,6 +22,9 @@ os.environ["LANGSMITH_TRACING"] = os.getenv("LANGSMITH_TRACING")
 os.environ["LANGSMITH_PROJECT"] = os.getenv("LANGSMITH_PROJECT")
 os.environ["LANGSMITH_API_KEY"] = os.getenv("LANGSMITH_API_KEY")
 
+
+#
+st.title("ChatAppwithHistory")
 
 # create the chatllm
 
@@ -108,20 +111,67 @@ runnable_with_history = RunnableWithMessageHistory(
     history_messages_key="history",
 )
 
-response = runnable_with_history.invoke(
-    {"input": my_self_into},
-    config={"configurable": {"session_id": "1"}},
+# response = runnable_with_history.invoke(
+#     {"input": my_self_into},
+#     config={"configurable": {"session_id": "1"}},
+# )
+
+
+# response = runnable_with_history.invoke(
+#     {"input": "who am i?"},
+#     config={"configurable": {"session_id": "1"}},
+# )
+
+# query = runnable_with_history.invoke(
+#     {"input": "what is the name of person we are taking?"},
+#     config={"configurable": {"session_id": "1"}},
+# )
+
+# print(query)
+
+
+
+
+# <---------------------------------------------------------trim messages----------------------------------------------------------->
+
+from langchain_core.messages import (
+    AIMessage,
+    HumanMessage,
+    SystemMessage,
+    trim_messages,
 )
 
 
-response = runnable_with_history.invoke(
-    {"input": "who am i?"},
-    config={"configurable": {"session_id": "1"}},
-)
 
-query = runnable_with_history.invoke(
-    {"input": "what is the name of person we are taking?"},
-    config={"configurable": {"session_id": "1"}},
-)
 
-print(query)
+
+messages = [
+    SystemMessage("you're a good assistant, you always respond with a joke."),
+    HumanMessage("i wonder why it's called langchain"),
+    AIMessage(
+        'Well, I guess they thought "WordRope" and "SentenceString" just didn\'t have the same ring to it!'
+    ),
+    HumanMessage("and who is harrison chasing anyways"),
+    AIMessage(
+        "Hmmm let me think.\n\nWhy, he's probably chasing after the last cup of coffee in the office!"
+    ),
+    HumanMessage("what do you call a speechless parrot"),
+]
+
+
+msg = trim_messages( 
+                    messages, 
+                    # keep the last <=n_count token of the messages
+                    strategy="last",
+                    max_tokens = 50,
+                    token_counter = llm,
+                    start_on = "human",
+                    include_system = True,
+                    allow_partial=False
+                    )
+
+
+
+st.write(msg)
+
+
