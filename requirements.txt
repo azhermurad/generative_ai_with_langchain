@@ -19,6 +19,7 @@ langchain-ollama
 langchain-huggingface
 sentence-transformers
 langchain-groq
+duckduckgo-search
 
 # vector store
 langchain-chroma>=0.1.2
@@ -29,3 +30,4 @@ streamlit
 
 # deployments
 langserve[all]
+
